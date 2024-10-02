@@ -1,64 +1,64 @@
 [
 	{
-		"modName": "GalaxyStarMapMenu",
+		"menuName": "GalaxyStarMapMenu",
 		"mods": [
 			"Astrolabe"
 		]
 	},
 	{
-		"modName": "DataMenu",
+		"menuName": "DataMenu",
 		"mods": [
 			"StarfieldCompendium"
 		]
 	},
 	{
-		"modName": "SecurityMenu",
+		"menuName": "SecurityMenu",
 		"mods": [
 			"LockOPlenty"
 		]
 	},
 	{
-		"modName": "InventoryMenu",
+		"menuName": "InventoryMenu",
 		"mods": [
 		]
 	},
 	{
-		"modName": "MissionMenu",
+		"menuName": "MissionMenu",
 		"mods": [
 		]
 	},
 	{
-		"modName": "ResearchMenu",
+		"menuName": "ResearchMenu",
 		"mods": [
 		]
 	},
 	{
-		"modName": "ArmorCraftingMenu",
+		"menuName": "ArmorCraftingMenu",
 		"mods": [
 		]
 	},
 	{
-		"modName": "DrugsCraftingMenu",
+		"menuName": "DrugsCraftingMenu",
 		"mods": [
 		]
 	},
 	{
-		"modName": "FoodCraftingMenu",
+		"menuName": "FoodCraftingMenu",
 		"mods": [
 		]
 	},
 	{
-		"modName": "IndustrialCraftingMenu",
+		"menuName": "IndustrialCraftingMenu",
 		"mods": [
 		]
 	},
 	{
-		"modName": "WeaponsCraftingMenu",
+		"menuName": "WeaponsCraftingMenu",
 		"mods": [
 		]
 	},
 	{
-		"modName": "ContainerMenu",
+		"menuName": "ContainerMenu",
 		"mods": [
 		]
 	}
