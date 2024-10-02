@@ -53,7 +53,7 @@
 		// Return: true if you handled the event, false otherwise
 		public function ProcessUserEvent(param1:String, param2:Boolean) : Boolean {
 			// Remove the following line if you plan to handle user events on your own
-			//return false;
+			return false;
 			
 			//AppendError("ProcessUserEvent " + param1);
 			
