@@ -113,7 +113,11 @@ I know the number of buttons we can use it limited, but let's try our best to no
 
 ## Tutorial
 
-If you are a UI modder interested in using **UIPlayNice**, you need to follow these steps to get it to work:
+If you are a UI modder interested in using **UIPlayNice**, there are 2 ways you can use it:
+- Start from the example project I provided
+- Implement the UIPlayNiceModInterface I created. You can see how to implement it in the example I provided.
+
+To start from the example I provided, you need to follow these steps to get it to work:
 1. Using Archive2.exe (from the Bethesda Creation Kit), extract **Starfield - Interface.ba2** to a work folder.
 2. Go to your work folder and use FFDec to open and extract a menu. Ex: **datamenu.swf**. You need this step to make sure you have the files required to compile later on.
 3. Download the **UIPlayNice** mods in your game.
