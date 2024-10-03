@@ -5,7 +5,7 @@ Welcome to the **UIPlayNice** official github.
 
 ## What
 
-**UIPlayNice** is a mod I created, and maintain, to help with the main issue Starfield has with UI mods.
+[**UIPlayNice**](https://creations.bethesda.net/en/starfield/details/08f53db9-450d-4cf3-9e8e-5c4bc6970aa2/UIPlayNice) is a mod I created, and maintain, to help with the main issue Starfield has with UI mods.
 
 ## MODS
 The following mods work with UIPlayNice:
