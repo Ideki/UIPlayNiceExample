@@ -37,7 +37,7 @@ After the initial proof of concept I decided to extend it to multiple menus and 
 
 With **UIPlayNice** we (modders) can focus on making modifying and expanding the game interface without having to worry about modifying/maintaining the game menu UI themselves.
 
-Players do should not have to forced choose between mods simply because the game does not support having multiple modes modifying the same files.
+Players should not have to forced choose between mods simply because the game does not support having multiple modes modifying the same files.
 
 The other goal is to remove the worry of modders to have to maintain their mods for each new version of the game.
 
