@@ -7,9 +7,6 @@ Welcome to the **UIPlayNice** official github.
 
 **UIPlayNice** is a mod I created, and maintain, to help with the main issue Starfield has with UI mods.
 
-At the moment the game can only have 1 UI mod modify each of the game menus.
-
-If more than multiple mods tries to modify the same menu, only 1 of them will succeed, forcing players to choose which mod they can have instead of having them all.
 ## MODS
 The following mods work with UIPlayNice:
 - [Starfield Compendium](https://creations.bethesda.net/en/starfield/details/2fccc6a3-0368-4b40-bbd4-6a1551d44e41/Starfield_Compendium)
@@ -28,6 +25,11 @@ You can contact me on:
 - Reddit: **Zorglub01**
 
 ## Why
+
+At the moment the game can only have 1 UI mod modify each of the game menus.
+
+If multiple mods try to modify the same menu, only 1 of them will succeed, forcing players to choose which mod they can have instead of having them all.
+
 I had some changes I wanted to do to some of my mods that would require them to work on the same menu.
 
 After some investigation, I figured that the only way to do so what to create an in-between mod that would handle my mods within the same menu, allowing them to co-exists.
@@ -37,6 +39,10 @@ After the initial proof of concept I decided to extend it to multiple menus and 
 With **UIPlayNice** we (modders) can focus on making modifying and expanding the game interface without having to worry about modifying/maintaining the game menu UI themselves.
 
 Players do should not have to forced choose between mods simply because the game does not support having multiple modes modifying the same files.
+
+The other goal is to remove the worry of modders to have to maintain their mods for each new version of the game.
+
+**UIPlayNice** takes care of it so modders do not have to modify the game menus files.
 
 ## Tools
 
@@ -65,14 +71,36 @@ Once your project is working properly, contact me so I can add your mod to the l
 **Do NOT include the UIPlayNice.json in your project as the UIPlayNice mod will overwrite yours.**
 
 The proper way is to tell me your mod so I can add it to the UIPlayNice config file in the mod itself.
+
+## Support
+I have created a tool that allows me to automatically update the game menu files to support **UIPlayNice** in less than 2 minutes.
+
+So each time a new version of the game will be available, I can publish an updated version of the mod and every mods using **UIPlayNice** should work again.
+
 ## Important
 As a UI modder using UIPlayNice, remember that you are not the only mod the players are using.
 
 So be mindful of other mods:
 
--  If you modify existing UI elements of a menu, keep the existing path to instances (ex: A menu has element A with a child B, and you want to replace A with your own version. You should still provide a child B in your A in case another mod needs access to it.)
+- If you modify existing UI elements of a menu, keep the existing path to instances (ex: A menu has element A with a child B, and you want to replace A with your own version. You should still provide a child B in your A in case another mod needs access to it.)
 
 - Refer to the list below of [Menu-Mod-Buttons](#menu-mod-buttons) to see which mod adds which buttons they add.
+
+## Menus
+Below is the list of menus **UIPlayNice** supports for modding.
+- InventoryMenu
+- MissionsMenu
+- ArmorCraftingMenu
+- DrugCraftingMenu
+- FoodCraftingMenu
+- IndustrialCraftingMenu
+- WeaponCraftingMenu
+- Research
+- Skills
+- ContainerMenu
+
+If you need **UIPlayNice** to support some menus that are not listed above, [contact me](#who) and I will see what can be done.
+
 ## Menu Mod Buttons
 Below is the list of each menu with the mods and the buttons those mods are using.
 
