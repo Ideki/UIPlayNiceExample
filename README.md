@@ -6,7 +6,9 @@ Welcome to the **UIPlayNice** official github.
 ## What
 
 **UIPlayNice** is a mod I created, and maintain, to help with the main issue Starfield has with UI mods.
+
 At the moment the game can only have 1 UI mod modify each of the game menus.
+
 If more than multiple mods tries to modify the same menu, only 1 of them will succeed, forcing players to choose which mod they can have instead of having them all.
 ## MODS
 The following mods work with UIPlayNice:
