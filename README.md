@@ -83,7 +83,7 @@ So be mindful of other mods:
 
 - If you modify existing UI elements of a menu, keep the existing path to instances (ex: A menu has element A with a child B, and you want to replace A with your own version. You should still provide a child B in your A in case another mod needs access to it.)
 
-- Refer to the list below of [Menu-Mod-Buttons](#menu-mod-buttons) to see which mod adds which buttons they add.
+- Refer to the list below of [Menu-Mod-Buttons](#menu-mod-buttons) to see which mod adds which buttons to which menu.
 
 ## Menus
 Below is the list of menus **UIPlayNice** supports for modding.
