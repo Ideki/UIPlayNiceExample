@@ -10,7 +10,6 @@ Welcome to the **UIPlayNice** official github.
 ## MODS
 The following mods work with UIPlayNice:
 - [Starfield Compendium](https://creations.bethesda.net/en/starfield/details/2fccc6a3-0368-4b40-bbd4-6a1551d44e41/Starfield_Compendium)
-- [Starfield Compendium Images](https://creations.bethesda.net/en/starfield/details/a118157d-598b-4c7f-a003-bf982b84eab0/Starfield_Compendium_Images)
 - [Astrolabe](https://creations.bethesda.net/en/starfield/details/8c1a34fb-0ef4-4208-b3cb-a8f2493b1618/Astrolabe)
 
 ## Who
