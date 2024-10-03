@@ -65,7 +65,7 @@ I am providing a [sample project](Example) for UI modders to try and start their
 
 You can also use the sample to start your project, but you have to rename the as/fla files to your own project name. (Remember to change the class names in the fla too!).
 
-Once your project is working properly, contact me so I can add your mod to the list supported mods for UIPlayNice.
+Once your project is working properly, contact me so I can add your mod to the list of mods integrating UIPlayNice.
 
 **Do NOT include the UIPlayNice.json in your project as the UIPlayNice mod will overwrite yours.**
 
