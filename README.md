@@ -29,9 +29,13 @@ You can contact me on:
 
 ## Why
 I had some changes I wanted to do to some of my mods that would require them to work on the same menu.
+
 After some investigation, I figured that the only way to do so what to create an in-between mod that would handle my mods within the same menu, allowing them to co-exists.
+
 After the initial proof of concept I decided to extend it to multiple menus and make it available to the community.
+
 With **UIPlayNice** we (modders) can focus on making modifying and expanding the game interface without having to worry about modifying/maintaining the game menu UI themselves.
+
 Players do should not have to forced choose between mods simply because the game does not support having multiple modes modifying the same files.
 
 ## Tools
@@ -45,22 +49,35 @@ If you want make UI mods, you will need the following tools:
 
 ## How
 **UIPlayNice** works by loading UI mods and sharing the events the game menu receives with each mod it handle for that menu.
+
 It also expose the game menu to each UI mod so direct modifications can be done by the mods.
+
 Each UI mod can also add buttons to the game menu buttons bar.
+
 All of this is accomplish simply by implementing the [UIPlayNiceModInterface.as](Example/UIPlayNiceModInterface.as) in your actionscript UI.
-I am providing a [sample project](Example) for UI modders to try and start their own project, as well as a [Tutorial](#tutorial) below
+
+I am providing a [sample project](Example) for UI modders to try and start their own project, as well as a [Tutorial](#tutorial) below.
+
 You can also use the sample to start your project, but you have to rename the as/fla files to your own project name. (Remember to change the class names in the fla too!).
+
 Once your project is working properly, contact me so I can add your mod to the list supported mods for UIPlayNice.
+
 **Do NOT include the UIPlayNice.json in your project as the UIPlayNice mod will overwrite yours.**
+
 The proper way is to tell me your mod so I can add it to the UIPlayNice config file in the mod itself.
 ## Important
 As a UI modder using UIPlayNice, remember that you are not the only mod the players are using.
+
 So be mindful of other mods:
+
 -  If you modify existing UI elements of a menu, keep the existing path to instances (ex: A menu has element A with a child B, and you want to replace A with your own version. You should still provide a child B in your A in case another mod needs access to it.)
+
 - Refer to the list below of [Menu-Mod-Buttons](#menu-mod-buttons) to see which mod adds which buttons they add.
 ## Menu Mod Buttons
 Below is the list of each menu with the mods and the buttons those mods are using.
+
 Try to not conflict with them.
+
 I know the number of buttons we can use it limited, but let's try our best to not step on each others feet.
 
 - DataMenu
