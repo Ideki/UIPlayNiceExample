@@ -3,16 +3,15 @@
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
 	
+	import flash.system.Capabilities;
+	
 	import Shared.AS3.Events.CustomEvent;
-	import Shared.Components.ButtonControls.ButtonBar.ButtonBar;
-	import Shared.Components.ButtonControls.Buttons.ButtonBase;
 	import Shared.Components.ButtonControls.ButtonData.ButtonBaseData;
 	import Shared.Components.ButtonControls.ButtonData.UserEventData;
-	import Shared.Components.ButtonControls.ButtonFactory.ButtonFactory;
-	import Shared.Components.ButtonControls.Buttons.IButton;
 	import Shared.GlobalFunc;
 	
 	import UIPlayNiceEventData;
+	import UIPlayNiceModButton;
 	import UIPlayNiceModInterface;
 	
 	public class UIPlayNiceExample extends MovieClip implements UIPlayNiceModInterface {
@@ -23,12 +22,15 @@
 		// Remove this if you do no need your own cursor
 		public var Cursor_mc:MovieClip;
 		
-		private var dummyButton:ButtonBase = null;
+		// The list of UIPlayNiceModButton that holds your buttons data and the instance of your buttons
+		private var buttons:Array = new Array();
 		
 		public function UIPlayNiceExample() {
 			super();
 			
 			errorHolder_mc.visible = false;
+			
+			AppendError("Language " + Capabilities.language);
 			
 			// Remove this if you do no need your own cursor
 			Cursor_mc.visible = false;
@@ -39,12 +41,13 @@
 // Interface mandatory functions
    
 		// Add buttons to the menu button bar
-		public function PrepareButtons(buttonBar_mc:ButtonBar):void {
+		public function PrepareButtons():Array {
 			// Sample button
 			var buttonData:ButtonBaseData = new ButtonBaseData("Dummy button",[new UserEventData("Select", this.OnDummyButton)]);
-			// Flip the next 2 lines if you want your buttons to be on the left or the right side or the menu normal buttons
-			dummyButton = ButtonFactory.AddToButtonBarLeft("BasicButton",buttonData, buttonBar_mc) as ButtonBase;
-			//dummyButton = ButtonFactory.AddToButtonBar("BasicButton",buttonData, buttonBar_mc) as ButtonBase;
+			var button:UIPlayNiceModButton = new UIPlayNiceModButton("BasicButton", buttonData, true);
+			buttons.push(button);
+			
+			return buttons;
 		}
 		
 		// Process user events (ex: button press)

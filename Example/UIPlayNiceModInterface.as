@@ -4,8 +4,8 @@
 	import Shared.Components.ButtonControls.ButtonBar.ButtonBar;
 	
 	public interface UIPlayNiceModInterface {
-		// Add buttons to the menu button bar
-		function PrepareButtons(buttonBar_mc:ButtonBar):void;
+		// Prepare your buttons for the menu button bar
+		function PrepareButtons():Array;
 		
 		// Process user events (ex: button press)
 		// param1: Name of the event
