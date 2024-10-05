@@ -78,7 +78,7 @@
 		public function ProcessDataEvent(eventData:UIPlayNiceEventData): void {
 			// Uncomment the following 2 lines to see events you receive from the game for the menu
 			AppendError(eventData.EventName);
-			// AppendError(getProperties(eventData.EventData), 0);
+			// AppendError(getProperties(eventData.EventData, 0));
 			
 			switch(eventData.EventName) {
 				case "SomeEventFromTheGame":
