@@ -3,8 +3,6 @@
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
 	
-	import flash.system.Capabilities;
-	
 	import Shared.AS3.Events.CustomEvent;
 	import Shared.Components.ButtonControls.ButtonData.ButtonBaseData;
 	import Shared.Components.ButtonControls.ButtonData.UserEventData;
@@ -29,8 +27,6 @@
 			super();
 			
 			errorHolder_mc.visible = false;
-			
-			AppendError("Language " + Capabilities.language);
 			
 			// Remove this if you do no need your own cursor
 			Cursor_mc.visible = false;
