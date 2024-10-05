@@ -10,8 +10,10 @@
 		// Process user events (ex: button press)
 		// param1: Name of the event
 		// param2: True = button is being pressed, False = button is released (it is always better to process the events when the button is released, not pressed)
-		// Return: true if you handled the event, false otherwise
-		function ProcessUserEvent(param1:String, param2:Boolean) : Boolean;
+		// Return:	1	if you handled the event,
+		// 			-1	if you do NOT handle the event AND the menu should NOT handle the event
+		// 			0	if you do NOT handle the event AND the menu SHOULD handle the event
+		function ProcessUserEvent(param1:String, param2:Boolean) : int;
 		
 		// Process events from the game here
 		function ProcessDataEvent(eventData:UIPlayNiceEventData): void;

@@ -53,19 +53,21 @@
 		// Process user events (ex: button press)
 		// param1: Name of the event
 		// param2: True = button is being pressed, False = button is released (it is always better to process the events when the button is released, not pressed)
-		// Return: true if you handled the event, false otherwise
-		public function ProcessUserEvent(param1:String, param2:Boolean) : Boolean {
+		// Return:	1	if you handled the event,
+		// 			-1	if you do NOT handle the event AND the menu should NOT handle the event
+		// 			0	if you do NOT handle the event AND the menu SHOULD handle the event
+		public function ProcessUserEvent(param1:String, param2:Boolean) : int {
 			// Remove the following line if you plan to handle user events on your own
-			return false;
+			return 0;
 			
 			//AppendError("ProcessUserEvent " + param1);
 			
-			var _loc3_:Boolean = false;
+			var _loc3_:int = 0;
 			try {
 				// Process the sample button event
 				if (param1 == "Select" && param2) {
 					OnDummyButton();
-					return true;
+					return 1;
 				}
 			}
 			catch(error:Error)
@@ -73,7 +75,7 @@
 				AppendError(error.message);
 			}
 			
-			return false;
+			return _loc3_;
 		}
 	
 		// Process events from the game here
