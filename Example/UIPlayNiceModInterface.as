@@ -35,5 +35,8 @@
 		// NOTE: be careful/mindful about what you are doing with the menu because other mods might modify it too.
 		// If you replace some UI elements, make sure to not change the names they might define internaly
 		function SetMenu(menu:MovieClip): void;
+		
+		// Provides the player data (player name, level,...)
+		function SetPlayerData(playerData:Object): void;
    }
 }

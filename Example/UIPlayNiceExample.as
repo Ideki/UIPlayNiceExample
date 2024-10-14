@@ -135,6 +135,11 @@
 			// NOTE: be careful/mindful about what you are doing with the menu because other mods might modify it too.
 			// If you replace some UI elements, make sure to not change the names they might define internaly
 		}
+		
+		// Provides the player data (player name, level,...)
+		public function SetPlayerData(playerData:Object): void {
+			
+		}
 	
 //----------------------------
 // Your own code
