@@ -4,6 +4,9 @@
 	import Shared.Components.ButtonControls.ButtonBar.ButtonBar;
 	
 	public interface UIPlayNiceModInterface {
+		// Returns the display name for the mod
+		function get DisplayName():String;
+		
 		// Prepare your buttons for the menu button bar
 		function PrepareButtons():Array;
 		
@@ -38,5 +41,8 @@
 		
 		// Provides the player data (player name, level,...)
 		function SetPlayerData(playerData:Object): void;
+		
+		// Provides data sent by Papyrus
+		function ForwardedDataFromPapyrus(commandAndData:String): void;
    }
 }

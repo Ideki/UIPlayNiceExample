@@ -4,6 +4,7 @@
 	import flash.events.MouseEvent;
 	
 	import Shared.AS3.Events.CustomEvent;
+	import Shared.AS3.Data.BSUIDataManager;
 	import Shared.Components.ButtonControls.ButtonData.ButtonBaseData;
 	import Shared.Components.ButtonControls.ButtonData.UserEventData;
 	import Shared.GlobalFunc;
@@ -12,11 +13,7 @@
 	import UIPlayNiceModButton;
 	import UIPlayNiceModInterface;
 	
-	public class UIPlayNiceExample extends MovieClip implements UIPlayNiceModInterface {
-		// A MovieClip containing a TextField to display message
-		// Used mostly to debug error messages or display events data
-		public var errorHolder_mc:MovieClip;
-		
+	public class UIPlayNiceExample extends UIPlayNiceMod implements UIPlayNiceModInterface {
 		// Remove this if you do no need your own cursor
 		public var Cursor_mc:MovieClip;
 		
@@ -24,9 +21,9 @@
 		private var buttons:Array = new Array();
 		
 		public function UIPlayNiceExample() {
-			super();
+			DisplayName = "UIPlayNiceExample";
 			
-			errorHolder_mc.visible = false;
+			super();
 			
 			// Remove this if you do no need your own cursor
 			Cursor_mc.visible = false;
@@ -61,7 +58,7 @@
 			var _loc3_:int = 0;
 			try {
 				// Process the sample button event
-				if (param1 == "Select" && param2) {
+				if (param1 == "Select" && param2 == false) {
 					OnDummyButton();
 					return 1;
 				}
@@ -77,7 +74,7 @@
 		// Process events from the game here
 		public function ProcessDataEvent(eventData:UIPlayNiceEventData): void {
 			// Uncomment the following 2 lines to see events you receive from the game for the menu
-			AppendError(eventData.EventName);
+			// AppendError(eventData.EventName);
 			// AppendError(getProperties(eventData.EventData, 0));
 			
 			switch(eventData.EventName) {
@@ -135,10 +132,24 @@
 			// NOTE: be careful/mindful about what you are doing with the menu because other mods might modify it too.
 			// If you replace some UI elements, make sure to not change the names they might define internaly
 		}
-		
-		// Provides the player data (player name, level,...)
-		public function SetPlayerData(playerData:Object): void {
+	
+		// Receive data from Papyrus
+		public function ForwardedDataFromPapyrus(commandAndData:String): void {
+			try {
+				var splitted:Array = commandAndData.split("|");
+				var command:String = splitted[0];
+				// Uncomment the following 2 lines to see events you receive from papyrus for the menu
+				// AppendError(command);
+				// AppendError(splitted[1]);
 			
+				switch(command) {
+					case "SomeCommandFromPapyrus":
+					break;
+				}
+			}
+			catch(error:Error) {
+				AppendError("ForwardedDataFromPapyrus error: " + error.message);
+			}
 		}
 	
 //----------------------------
@@ -157,74 +168,6 @@
 	
 		private function OnDummyButton():void {
 			AppendError("Dummy button pressed");
-		}
-	
-//----------------------------
-// Helper functions
-	
-		private var _errorText:String = "";
-		private function OnError(param1:CustomEvent) {
-			var text:String = "";
-			if (param1.params is Error){
-				text = param1.params.message;
-			}
-			else if (param1.params is String ||
-				param1.params is Number ||
-				param1.params is int) {
-				text = param1.params.toString();
-			}
-			else {
-				text = "Error";
-			}
-			AppendError(text);
-		}
-		
-		private function AppendError(text:String):void {
-			_errorText += text + "\n";
-			errorHolder_mc.visible = true;
-			GlobalFunc.SetText(this.errorHolder_mc.text_tf, _errorText);
-		}
-	
-		public static function getProperties(obj:*, depth:int):String  {
-            var p:*;
-            var res:String = '{';
-            var val:String;
-            var prop:String;
-            for (p in obj) {
-                prop = String(p);
-                if (prop && prop!=='' && prop!==' ') {
-					if (obj[p] is String) {
-						val = String(obj[p]);
-						res += SpacePadding(depth) + '"'+prop+'"'+': "'+val+'",\n';
-					}
-					else if(obj[p] is Number) {
-						val = obj[p].toString();
-						res += SpacePadding(depth) + '"'+prop+'"'+': '+val+',\n';
-					}
-					else if(obj[p] is Boolean) {
-						val = obj[p].toString();
-						res += SpacePadding(depth) + '"'+prop+'"'+': '+val+',\n';
-					}
-					else if(obj[p] is Array) {
-						val = getProperties(obj[p], depth + 1);
-						res += SpacePadding(depth) + '"'+prop+'"'+': ['+val+'],\n';
-					}
-					else{
-						val = getProperties(obj[p], depth + 1);
-						res += SpacePadding(depth) + '"'+prop+'"'+': '+val+',\n';
-					}
-                }
-            }
-			res += "},"
-            return res;
-        }
-	
-	    private static function SpacePadding(depth:int):String {
-			var spaces:String = "";
-			for (var i:int = 0; i < depth; i ++) {
-				spaces += "  ";
-			}
-			return spaces;
 		}
 	}
 }
