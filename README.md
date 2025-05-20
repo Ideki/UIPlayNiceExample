@@ -120,6 +120,8 @@ Below is the list of menus **UIPlayNice** supports for modding.
 - ResearchMenu: UI Attached to the Research bench
 - SecurityMenu: UI attached to the DigiPick minigame
 - SkillsMenu: UI attached to the skills view
+- SpaceshipEditorMenu: UI attached to editing a spaceship
+- SpaceshipInfoMenu : UI attached to showing a spaceship info
 - WeaponCraftingMenu: UI attached t othe Weapon Crafting bench
 
 If you need **UIPlayNice** to support some menus that are not listed above, [contact me](#who) and I will see what can be done.
@@ -151,7 +153,7 @@ To start from the example I provided, you need to follow these steps to get it t
 3. In FFDec, click 'Export to FLA', Choose a folder where the fla and as3 files will be extracted.<br>
 That folder will be your work folder, where you edit/compile your own fla.<br>
 You need this step to make sure you have the files required to compile later on (Button factory, event manager,...).
-4. Download the UIPlayNice-updated Menu files (ex: DataMenu.swf & DataMenu_lrg.swf) from [Menu](UIPlayNiceExample/Example/Menus).
+4. Download the UIPlayNice-updated Menu files (ex: DataMenu.swf & DataMenu_lrg.swf) from [Menu](Menus).
 And place them in your **steamapps\common\Starfield\Data\interface**.
 5. Download **UIPlayNice.swf** from [Menu](UIPlayNiceExample/Example/Menus).
 And place it in your **steamapps\common\Starfield\Data\interface**.
