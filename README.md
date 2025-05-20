@@ -74,7 +74,7 @@ UIplayNice works for PC and Xbox.
 I have created a tool that allows me to automatically update **UIPlayNice** to the game menu files latest version in less than 2 minutes.<br>
 So each time a new version of the game will be available, I will publish an updated version of the Menu files very quickly.<br>
 All you have to do is:
-- Get the latest version of the Menu files your mod is using from [Menu](UIPlayNiceExample/Example/Menus)
+- Get the latest version of the Menu files your mod is using from [Menu](Menus)
 - Copy them them in **steamapps\common\Starfield\Data\interface**
 - Repackage all your mods files in the CK, and publish it.
 
@@ -155,11 +155,11 @@ That folder will be your work folder, where you edit/compile your own fla.<br>
 You need this step to make sure you have the files required to compile later on (Button factory, event manager,...).
 4. Download the UIPlayNice-updated Menu files (ex: DataMenu.swf & DataMenu_lrg.swf) from [Menu](Menus).
 And place them in your **steamapps\common\Starfield\Data\interface**.
-5. Download **UIPlayNice.swf** from [Menu](UIPlayNiceExample/Example/Menus).
+5. Download **UIPlayNice.swf** from [Menu](Menus).
 And place it in your **steamapps\common\Starfield\Data\interface**.
-6. Download the [Papyrus script](UIPlayNiceExample/Scripts/uiplaynice/) and place it in **steamapps\common\Starfield\Data\Scripts\uiplaynice**
-7. Download all files in [Example](UIPlayNiceExample/Example) and save them in your work folder (where you extracted the files in step #3).
-8. Go inside your work folder and open [UIPlayNiceExample.fla](UIPlayNiceExample/Example/UIPlayNiceExample.fla) with **Adobe Animate**.
+6. Download the [Papyrus script](Scripts/uiplaynice/) and place it in **steamapps\common\Starfield\Data\Scripts\uiplaynice**
+7. Download all files in [Example](Example) and save them in your work folder (where you extracted the files in step #3).
+8. Go inside your work folder and open [UIPlayNiceExample.fla](Example/UIPlayNiceExample.fla) with **Adobe Animate**.
 9. Publish **UIPlayNiceExample** to generate the swf file.
 10. Copy the swf file to **steamapps\common\Starfield\Data\interface**
 11. Open the Starfield: Creation Kit
