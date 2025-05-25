@@ -115,8 +115,6 @@ Below is the list of menus **UIPlayNice** supports for modding.
 - IndustrialCraftingMenu: UI attached to the Components Crafting bench
 - InventoryMenu: UI attached to the inventory
 - MissionsMenu: UI attached to the list of missions
-- MonocleMenu: UI attached to the scanner
-- PauseMenu: UI attached to the escape menu
 - ResearchMenu: UI Attached to the Research bench
 - SecurityMenu: UI attached to the DigiPick minigame
 - SkillsMenu: UI attached to the skills view
