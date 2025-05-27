@@ -50,9 +50,6 @@
 		// 			-1	if you do NOT handle the event AND the menu should NOT handle the event
 		// 			0	if you do NOT handle the event AND the menu SHOULD handle the event
 		public function ProcessUserEvent(param1:String, param2:Boolean) : int {
-			// Remove the following line if you plan to handle user events on your own
-			return 0;
-			
 			//AppendError("ProcessUserEvent " + param1);
 			
 			var _loc3_:int = 0;
