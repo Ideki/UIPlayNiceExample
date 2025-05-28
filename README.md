@@ -209,8 +209,81 @@ If some steps are not clear, or something does not work, [contact me](#who) and 
 
 ## How to send data from Papyrus to your mod
 
-Tutorial coming soon
+The most advanced form of integration involves sending data with Papyrus. This tutorial will assume general knowledge of Papyrus and will speak in more broad terms.
+
+In order to send data to your SWF files, you’ll need to register for and react to the corresponding base game menu opening.
+
+You’ll want to create a quest with a management script on it to handle this.
+
+Using the function RegisterForMenuOpenCloseEvent, you can register for the base game SWF yours works with opening and closing. You can do this in the OnQuestStarted event. For example:
+
+```
+Event OnQuestStarted()
+	RegisterForMenuOpenCloseEvent(“GalaxyStarMapMenu”)
+EndEvent
+```
+
+You’ll then want to set up a reaction to that event. For example:
+
+```
+Event OnMenuOpenCloseEvent(String asMenuName, Bool abOpening)
+	if(asMenuName == “GalaxyStarMapMenu”)
+		if(abOpening)
+			SendMyMapData()
+		Endif
+	endif
+EndEvent
+```
+
+Then finally you’ll want to send your actual data. UIPlayNice has a basic relay feature to send a string to your SWF file.
+There is a papyrus function called **Game.ShowCustomWatchAlert**, this function accepts a string and sends it to the watch hud.
+UIPlayNice can capture these strings and relay them for you.
+
+It’s up to you to determine what data to send and how to react to it, but here is the format UIPlayNice is looking for:
+
+```
+"UIPlayNice.ForwardData." + sTargetMenu + “.” + sYourMenu + “:” + sCommandYourSWFWillReactTo
+```
+
+Where **sTargetMenu** is a string of the base game’s swf name without extension, and **sYourMenu** is a string of your swf name without extension.
+
+Here’s an example command:
+
+```
+Game.ShowCustomWatchAlert(“UIPlayNice.ForwardData.GalaxyStarMapMenu.watchtowergalaxymap:WhateverDataIWantMyModToReactTo”)
+```
+
+In reality, that “WhateverDataIWantMyModToReactTo” would be a delimited string of the data you want your swf to be able to handle.
 
 ## How to set a custom icon for your mod quests?
 
-Tutorial coming soon
+The simplest integration you can do with UIPlayNice is a custom quest icon.
+To set this up do the following:
+
+1. Follow all instructions from the ([Tutorial](#tutorial)) to create your mod
+2. Download the following files:
+	- [MissionMenu.swf](Menus/missionmenu.fla)
+	- [MissionMenu_lrg.swf](Menus/missionmenu_lrg.fla)
+	- [DataMenu.swf](Menus/datamenu.fla)
+	- [DataMenu_lrg.swf](Menus/datamenu_lrg.fla)
+	Note: **MissionMenu** will show your icon in the list of missions as well as the mission info panel
+	**DataMenu** will show your icon at the bottom of the central circle if your mission is the current active one.
+3. Copy those 4 files to **Data\Interface**
+4. Create a copy of the [UIPlayNiceExampleIcons.fla](Example/UIPlayNiceExampleIcons.fla) file.
+5. Update the following 2 objects **only**:
+	- Icon
+	- Icon Color
+	The other 2 objects will automatically update.
+	Note:
+	- the icons size **must** be 32x32 pixels at most
+	- the icons	must be centered at 0,0 (**not** 0,0 in the top left corner)
+6. Publish the file to a swf and save it to your Starfield folder under **Data\Interface\questicons** (you will need to create the questicons folder).
+7. Open your plugin in the Creation Kit, then for each quest you want to use the custom icon, click Select next to the SWF File option and navigate to your custom icon swf (in **Data\Interface\questicons**).
+![alt text](CustomQuestIconsScreenshot "Title")
+
+That’s it! As long as you have the base UIPlayNice files included, it will detect the icons and display them to the game Missions menu.
+
+Note that as of the writing of this tutorial, the icons will not display in the objective update notifications in the top left corner due to limitations of the tools available to the community.
+This will likely be resolved in a future update of the game and UIPlayNice.
+
+Keep an eye on the Github page for updates which will require you to update your mod’s copy of UIPlayNice.
