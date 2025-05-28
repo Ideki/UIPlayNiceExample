@@ -279,7 +279,7 @@ To set this up do the following:
 	- the icons	must be centered at 0,0 (**not** 0,0 in the top left corner)
 6. Publish the file to a swf and save it to your Starfield folder under **Data\Interface\questicons** (you will need to create the questicons folder).
 7. Open your plugin in the Creation Kit, then for each quest you want to use the custom icon, click Select next to the SWF File option and navigate to your custom icon swf (in **Data\Interface\questicons**).
-![alt text](CustomQuestIconsScreenshot "Title")
+![SFCK interface](CustomQuestIconsScreenshot.png "SFCK Interface")
 
 That’s it! As long as you have the base UIPlayNice files included, it will detect the icons and display them to the game Missions menu.
 
