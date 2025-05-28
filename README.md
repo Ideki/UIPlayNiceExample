@@ -151,9 +151,9 @@ To start from the example I provided, you need to follow these steps to get it t
 3. In FFDec, click 'Export to FLA', Choose a folder where the fla and as3 files will be extracted.<br>
 That folder will be your work folder, where you edit/compile your own fla.<br>
 You need this step to make sure you have the files required to compile later on (Button factory, event manager,...).
-4. Download the UIPlayNice-updated Menu files (ex: DataMenu.swf & DataMenu_lrg.swf) from [Menu](Menus).
+4. Download the UIPlayNice-updated Menu files (ex: DataMenu.swf & DataMenu_lrg.swf) from [Menu](Menus).<br>
 And place them in your **steamapps\common\Starfield\Data\interface**.
-5. Download **UIPlayNice.swf** from [Menu](Menus).
+5. Download **UIPlayNice.swf** from [Menu](Menus).<br>
 And place it in your **steamapps\common\Starfield\Data\interface**.
 6. Download the [Papyrus script](Scripts/uiplaynice/) and place it in **steamapps\common\Starfield\Data\Scripts\uiplaynice**
 7. Download all files in [Example](Example) and save them in your work folder (where you extracted the files in step #3).
@@ -195,7 +195,7 @@ There is a documentation string section to the bottom right of that window when 
 	- SpaceshipInfoMenu = 19
 	- ResearchMenu = 20
 	- WeaponsCraftingMenu = 21
-	- WorkshopMenu = 22<br><br>
+	- WorkshopMenu = 22<br>
 (Note: not all of those menus are supported by UIPlayNice yet)
 
 23. After filling that out, click OK on everything that's open, and then save your plugin.
@@ -209,13 +209,16 @@ If some steps are not clear, or something does not work, [contact me](#who) and 
 
 ## How to send data from Papyrus to your mod
 
-The most advanced form of integration involves sending data with Papyrus. This tutorial will assume general knowledge of Papyrus and will speak in more broad terms.
+The most advanced form of integration involves sending data with Papyrus.<br>
+This tutorial will assume general knowledge of Papyrus and will speak in more broad terms.
 
 In order to send data to your SWF files, you’ll need to register for and react to the corresponding base game menu opening.
 
 You’ll want to create a quest with a management script on it to handle this.
 
-Using the function RegisterForMenuOpenCloseEvent, you can register for the base game SWF yours works with opening and closing. You can do this in the OnQuestStarted event. For example:
+Using the function RegisterForMenuOpenCloseEvent, you can register for the base game SWF yours works with opening and closing.<br>
+You can do this in the OnQuestStarted event.<br>
+For example:
 
 ```
 Event OnQuestStarted()
@@ -235,8 +238,8 @@ Event OnMenuOpenCloseEvent(String asMenuName, Bool abOpening)
 EndEvent
 ```
 
-Then finally you’ll want to send your actual data. UIPlayNice has a basic relay feature to send a string to your SWF file.
-There is a papyrus function called **Game.ShowCustomWatchAlert**, this function accepts a string and sends it to the watch hud.
+Then finally you’ll want to send your actual data. UIPlayNice has a basic relay feature to send a string to your SWF file.<br>
+There is a papyrus function called **Game.ShowCustomWatchAlert**, this function accepts a string and sends it to the watch hud.<br>
 UIPlayNice can capture these strings and relay them for you.
 
 It’s up to you to determine what data to send and how to react to it, but here is the format UIPlayNice is looking for:
@@ -257,7 +260,7 @@ In reality, that “WhateverDataIWantMyModToReactTo” would be a delimited stri
 
 ## How to set a custom icon for your mod quests?
 
-The simplest integration you can do with UIPlayNice is a custom quest icon.
+The simplest integration you can do with UIPlayNice is a custom quest icon.<br>
 To set this up do the following:
 
 1. Follow all instructions from the ([Tutorial](#tutorial)) to create your mod
@@ -265,16 +268,16 @@ To set this up do the following:
 	- [MissionMenu.swf](Menus/missionmenu.fla)
 	- [MissionMenu_lrg.swf](Menus/missionmenu_lrg.fla)
 	- [DataMenu.swf](Menus/datamenu.fla)
-	- [DataMenu_lrg.swf](Menus/datamenu_lrg.fla)  
-	Note: **MissionMenu** will show your icon in the list of missions as well as the mission info panel  
-	**DataMenu** will show your icon at the bottom of the central circle if your mission is the current active one.
+	- [DataMenu_lrg.swf](Menus/datamenu_lrg.fla)<br>
+Note: **MissionMenu** will show your icon in the list of missions as well as the mission info panel.<br>
+**DataMenu** will show your icon at the bottom of the central circle if your mission is the current active one.
 3. Copy those 4 files to **Data\Interface**
 4. Create a copy of the [UIPlayNiceExampleIcons.fla](Example/UIPlayNiceExampleIcons.fla) file.
 5. Update the following 2 objects **only**:
 	- Icon
-	- Icon Color  
-	The other 2 objects will automatically update.  
-	Note:  
+	- Icon Color<br>
+The other 2 objects will automatically update.<br>
+Note:
 	- the icons size **must** be 32x32 pixels at most
 	- the icons	must be centered at 0,0 (**not** 0,0 in the top left corner)
 6. Publish the file to a swf and save it to your Starfield folder under **Data\Interface\questicons** (you will need to create the questicons folder).
@@ -283,7 +286,7 @@ To set this up do the following:
 
 That’s it! As long as you have the base UIPlayNice files included, it will detect the icons and display them to the game Missions menu.
 
-Note that as of the writing of this tutorial, the icons will not display in the objective update notifications in the top left corner due to limitations of the tools available to the community.  
+Note that as of the writing of this tutorial, the icons will not display in the objective update notifications in the top left corner due to limitations of the tools available to the community.<br>
 This will likely be resolved in a future update of the game and UIPlayNice.
 
 Keep an eye on the Github page for updates which will require you to update your mod’s copy of UIPlayNice.
