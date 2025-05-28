@@ -266,15 +266,15 @@ To set this up do the following:
 	- [MissionMenu_lrg.swf](Menus/missionmenu_lrg.fla)
 	- [DataMenu.swf](Menus/datamenu.fla)
 	- [DataMenu_lrg.swf](Menus/datamenu_lrg.fla)  
-	Note: **MissionMenu** will show your icon in the list of missions as well as the mission info panel
+	Note: **MissionMenu** will show your icon in the list of missions as well as the mission info panel  
 	**DataMenu** will show your icon at the bottom of the central circle if your mission is the current active one.
 3. Copy those 4 files to **Data\Interface**
 4. Create a copy of the [UIPlayNiceExampleIcons.fla](Example/UIPlayNiceExampleIcons.fla) file.
 5. Update the following 2 objects **only**:
 	- Icon
-	- Icon Color
-	The other 2 objects will automatically update.
-	Note:
+	- Icon Color  
+	The other 2 objects will automatically update.  
+	Note:  
 	- the icons size **must** be 32x32 pixels at most
 	- the icons	must be centered at 0,0 (**not** 0,0 in the top left corner)
 6. Publish the file to a swf and save it to your Starfield folder under **Data\Interface\questicons** (you will need to create the questicons folder).
@@ -283,7 +283,7 @@ To set this up do the following:
 
 That’s it! As long as you have the base UIPlayNice files included, it will detect the icons and display them to the game Missions menu.
 
-Note that as of the writing of this tutorial, the icons will not display in the objective update notifications in the top left corner due to limitations of the tools available to the community.
+Note that as of the writing of this tutorial, the icons will not display in the objective update notifications in the top left corner due to limitations of the tools available to the community.  
 This will likely be resolved in a future update of the game and UIPlayNice.
 
 Keep an eye on the Github page for updates which will require you to update your mod’s copy of UIPlayNice.
