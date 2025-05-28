@@ -265,7 +265,7 @@ To set this up do the following:
 	- [MissionMenu.swf](Menus/missionmenu.fla)
 	- [MissionMenu_lrg.swf](Menus/missionmenu_lrg.fla)
 	- [DataMenu.swf](Menus/datamenu.fla)
-	- [DataMenu_lrg.swf](Menus/datamenu_lrg.fla)
+	- [DataMenu_lrg.swf](Menus/datamenu_lrg.fla)  
 	Note: **MissionMenu** will show your icon in the list of missions as well as the mission info panel
 	**DataMenu** will show your icon at the bottom of the central circle if your mission is the current active one.
 3. Copy those 4 files to **Data\Interface**
