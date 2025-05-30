@@ -155,7 +155,7 @@ You need this step to make sure you have the files required to compile later on 
 And place them in your **steamapps\common\Starfield\Data\interface**.
 5. Download **UIPlayNice.swf** from [Menu](Menus).<br>
 And place it in your **steamapps\common\Starfield\Data\interface**.
-6. Download the [Papyrus script](Scripts/uiplaynice/) and place it in **steamapps\common\Starfield\Data\Scripts\uiplaynice**
+6. Download the [Papyrus script](Scripts/uiplaynice/myuiplaynicemanager.pex) and place it in **steamapps\common\Starfield\Data\Scripts\uiplaynice**
 7. Download all files in [Example](Example) and save them in your work folder (where you extracted the files in step #3).
 8. Go inside your work folder and open [UIPlayNiceExample.fla](Example/UIPlayNiceExample.fla) with **Adobe Animate**.
 9. Publish **UIPlayNiceExample** to generate the swf file.
@@ -290,3 +290,8 @@ Note that as of the writing of this tutorial, the icons will not display in the 
 This will likely be resolved in a future update of the game and UIPlayNice.
 
 Keep an eye on the Github page for updates which will require you to update your mod’s copy of UIPlayNice.
+
+## Others
+
+The [source psc](Scripts/uiplaynice/myuiplaynicemanager.psc) file for the myuiplaynicemanager script is available if you ever want to tinker with it.
+Just be mindful of the impact your changes may have on other mods that use the myuiplaynicemanager.pex.
