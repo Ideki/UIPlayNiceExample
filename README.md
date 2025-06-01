@@ -106,6 +106,7 @@ You should still provide a child B in your A in case another mod needs access to
 ## Menus
 Below is the list of menus **UIPlayNice** supports for modding.
 - ArmorCraftingMenu: UI attached to the Armor crafting bench
+- CharGenMenu: UI for character creation
 - ContainerMenu: UI Attached to containers
 - DataMenu: UI with our character in the middle of a circle and subsection your can navigate to around it
 - DrugCraftingMenu: UI attached to the Drug Crafting bench
