@@ -113,6 +113,7 @@ Below is the list of menus **UIPlayNice** supports for modding.
 - FoodCraftingMenu: UI attached to the Food crafting bench
 - GalaxyStarmapMarkers: UI attached to the Planet/System/Galaxy map
 - GalaxyStarmapMenu: UI attached to the Planet/System/Galaxy map
+- GenesisTerminalMenu: UI attached to the computer terminals
 - IndustrialCraftingMenu: UI attached to the Components Crafting bench
 - InventoryMenu: UI attached to the inventory
 - MissionsMenu: UI attached to the list of missions
@@ -196,8 +197,10 @@ There is a documentation string section to the bottom right of that window when 
 	- SpaceshipInfoMenu = 19
 	- ResearchMenu = 20
 	- WeaponsCraftingMenu = 21
-	- WorkshopMenu = 22<br>
+	- WorkshopMenu = 22
+	- GenesisTerminalMenu<br>
 (Note: not all of those menus are supported by UIPlayNice yet)
+(Note: If a menu does not have a ID number, you must then use the menu name as **TargetMenuName**)
 
 23. After filling that out, click OK on everything that's open, and then save your plugin.
 24. Create an archive containing:
